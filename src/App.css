@@ -11,6 +11,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 img {
   width: 10%;
   height: auto;
+  object-fit: contain;
 }
 
 p {
