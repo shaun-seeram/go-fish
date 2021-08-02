@@ -41,7 +41,7 @@ const Play2 = () => {
                     noDuplicate ++
                 }
                 if (noDuplicate >= 3) {
-                    if (iteratedArray.some(newCard => newCard.value == card.value)) {
+                    if (iteratedArray.some(newCard => newCard.value === card.value)) {
                         return
                     } else {
                         iteratedArray.push(card)
@@ -63,11 +63,11 @@ const Play2 = () => {
         playerDeck.forEach((card) => {
             let noDuplicate = 0;
             playerDeck.forEach((secondCard) => {
-                if (card.value == secondCard.value) {
+                if (card.value === secondCard.value) {
                     noDuplicate ++
                 }
                 if (noDuplicate === 3) {
-                    if (iteratedArray.some(newCard => newCard.value == card.value)) {
+                    if (iteratedArray.some(newCard => newCard.value === card.value)) {
                         return
                     } else {
                         iteratedArray.push(card)
@@ -195,7 +195,7 @@ const Play2 = () => {
                 {
                     cpuIterated.map((card) => {
                         return (
-                            <img src={Back} key={card.code} /> 
+                            <img src={Back} key={card.code} alt={`Card ${card.code}`} /> 
                         )
                     })
                 }
@@ -220,7 +220,7 @@ const Play2 = () => {
                 {
                     playerIterated.map((card) => {
                         return (
-                            <img src={card.image} key={card.code} />
+                            <img src={card.image} key={card.code} alt={`Card ${card.code}`}/>
                         )
                     })
                 }
